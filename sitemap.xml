@@ -4,7 +4,14 @@
   <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2020-05-18T14:47:42.848Z</lastmod>
+    <lastmod>2020-05-20T11:35:21.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/index.html</loc>
+    
+    <lastmod>2020-05-20T11:35:14.399Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/2020/05/07/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2020-05-10T12:55:08.024Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/index.html</loc>
-    
-    <lastmod>2020-05-10T12:46:29.987Z</lastmod>
     
   </url>
   
