@@ -325,22 +325,22 @@
 
 
   
-    <article id="post-axios请求过程中data和params的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-element-ui之form表单注意点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">axios请求过程中data和params的区别</a>
+      <a class="article-title" href="/2020/05/15/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/">element-ui之form表单注意点</a>
     </h1>
   
 
         
         
 
-<a href="/2020/05/07/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-05-07T14:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+<a href="/2020/05/15/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2020-05-15T14:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
 </a>
         
       </header>
@@ -349,9 +349,8 @@
     <div class="article-entry" itemprop="articleBody">
       
 
-       <h2 id="axios请求过程中data和params的区别"><a href="#axios请求过程中data和params的区别" class="headerlink" title="axios请求过程中data和params的区别"></a>axios请求过程中data和params的区别</h2><h3 id="一-axios请求参数data和params"><a href="#一-axios请求参数data和params" class="headerlink" title="一. axios请求参数data和params"></a>一. axios请求参数data和params</h3><h4 id="1-1-axios中关于参数data的基本使用"><a href="#1-1-axios中关于参数data的基本使用" class="headerlink" title="1.1. axios中关于参数data的基本使用"></a>1.1. axios中关于参数data的基本使用</h4><p>1.axios带data参数的请求</p>
-<p>   data是添加到请求体（body）中的， 用于post请求。而如果把data换成params显然不能成功的发送请求的</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    method: &quot;post&quot;,</span><br><span class="line">    url: &quot;http:&#x2F;&#x2F;www.tuling123.com&#x2F;openapi&#x2F;api?key&#x3D;5&quot;,</span><br><span class="line">    data: &#123;</span><br><span class="line">    info: &quot;湖北天气&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+       <h2 id="element-ui之form表单注意点"><a href="#element-ui之form表单注意点" class="headerlink" title="element-ui之form表单注意点"></a>element-ui之form表单注意点</h2><h3 id="一-关于rules"><a href="#一-关于rules" class="headerlink" title="一. 关于rules"></a>一. 关于rules</h3><h4 id="1-1-rules的参数"><a href="#1-1-rules的参数" class="headerlink" title="1.1. rules的参数"></a>1.1. rules的参数</h4><p>1.注意rules对应的规则对象，如下面的loginRules，里面的参数必须和prop对应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    inputText: &#123;</span><br><span class="line">      &#39;account&#39;: &#39;&#39;,</span><br><span class="line">      &#39;password&#39;: &#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    loginRules: &#123;</span><br><span class="line">      account: [</span><br><span class="line">        &#123;required: true, message: &#39;账号不能为空&#39;, trigger: &#39;blur&#39; &#125;,</span><br><span class="line">        &#123; min: 4, max: 10, message: &#39;长度在 4 到 10 个字符&#39;, trigger: &#39;blur&#39; &#125;</span><br><span class="line">      ],</span><br><span class="line">      password: [</span><br><span class="line">        &#123;required: true, message: &#39;密码不能为空&#39;, trigger: &#39;blur&#39;&#125;,</span><br><span class="line">        &#123; min: 5, max: 16, message: &#39;长度在 5 到 16 个字符&#39;, trigger: &#39;blur&#39; &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
       
 
@@ -366,7 +365,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">朕要看全部 >></a>
+          <a class="article-more-a" href="/2020/05/15/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/">朕要看全部 >></a>
         </p>
       
 
@@ -622,6 +621,80 @@
 
 
   
+    <article id="post-axios请求过程中data和params的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">axios请求过程中data和params的区别</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2020-05-05T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
+</a>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+       <h2 id="axios请求过程中data和params的区别"><a href="#axios请求过程中data和params的区别" class="headerlink" title="axios请求过程中data和params的区别"></a>axios请求过程中data和params的区别</h2><h3 id="一-axios请求参数data和params"><a href="#一-axios请求参数data和params" class="headerlink" title="一. axios请求参数data和params"></a>一. axios请求参数data和params</h3><h4 id="1-1-axios中关于参数data的基本使用"><a href="#1-1-axios中关于参数data的基本使用" class="headerlink" title="1.1. axios中关于参数data的基本使用"></a>1.1. axios中关于参数data的基本使用</h4><p>1.axios带data参数的请求</p>
+<p>   data是添加到请求体（body）中的， 用于post请求。而如果把data换成params显然不能成功的发送请求的</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    method: &quot;post&quot;,</span><br><span class="line">    url: &quot;http:&#x2F;&#x2F;www.tuling123.com&#x2F;openapi&#x2F;api?key&#x3D;5&quot;,</span><br><span class="line">    data: &#123;</span><br><span class="line">    info: &quot;湖北天气&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+      
+
+      
+
+    </div>
+
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">朕要看全部 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  
+  
+  
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-element-ui导航菜单踩坑记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -664,79 +737,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/04/element-ui%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-element-ui之form表单注意点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/01/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/">element-ui之form表单注意点</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/01/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2020-05-01T02:46:23.526Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="element-ui之form表单注意点"><a href="#element-ui之form表单注意点" class="headerlink" title="element-ui之form表单注意点"></a>element-ui之form表单注意点</h2><h3 id="一-关于rules"><a href="#一-关于rules" class="headerlink" title="一. 关于rules"></a>一. 关于rules</h3><h4 id="1-1-rules的参数"><a href="#1-1-rules的参数" class="headerlink" title="1.1. rules的参数"></a>1.1. rules的参数</h4><p>1.注意rules对应的规则对象，如下面的loginRules，里面的参数必须和prop对应</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    inputText: &#123;</span><br><span class="line">      &#39;account&#39;: &#39;&#39;,</span><br><span class="line">      &#39;password&#39;: &#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    loginRules: &#123;</span><br><span class="line">      account: [</span><br><span class="line">        &#123;required: true, message: &#39;账号不能为空&#39;, trigger: &#39;blur&#39; &#125;,</span><br><span class="line">        &#123; min: 4, max: 10, message: &#39;长度在 4 到 10 个字符&#39;, trigger: &#39;blur&#39; &#125;</span><br><span class="line">      ],</span><br><span class="line">      password: [</span><br><span class="line">        &#123;required: true, message: &#39;密码不能为空&#39;, trigger: &#39;blur&#39;&#125;,</span><br><span class="line">        &#123; min: 5, max: 16, message: &#39;长度在 5 到 16 个字符&#39;, trigger: &#39;blur&#39; &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/01/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/">朕要看全部 >></a>
         </p>
       
 
