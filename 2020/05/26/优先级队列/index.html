@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hey Judy</title>
+  <title>优先级队列 | Hey Judy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hey Judy">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="优先级队列一. 队列1.什么是队列 我们都知道我们大部分代码都是放到栈中，等执行的时候再把它拿出来。而放入栈里面的代码执行先后顺序为后放入的先执行，它就像一个桶只有一个开口。 而队列就像排队一样有两个开口，且先进去的先执行  2. 什么是优先级队列 优先级队列就是在储存数据的时候并传入一个优先级，根据优先级来改变数据的位置，就像现实生活中插队一样">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优先级队列">
+<meta property="og:url" content="http://yoursite.com/2020/05/26/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/index.html">
 <meta property="og:site_name" content="Hey Judy">
+<meta property="og:description" content="优先级队列一. 队列1.什么是队列 我们都知道我们大部分代码都是放到栈中，等执行的时候再把它拿出来。而放入栈里面的代码执行先后顺序为后放入的先执行，它就像一个桶只有一个开口。 而队列就像排队一样有两个开口，且先进去的先执行  2. 什么是优先级队列 优先级队列就是在储存数据的时候并传入一个优先级，根据优先级来改变数据的位置，就像现实生活中插队一样">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-26T13:20:31.000Z">
+<meta property="article:modified_time" content="2020-05-26T13:21:54.553Z">
 <meta property="article:author" content="Leo Lee">
 <meta name="twitter:card" content="summary">
   
@@ -171,15 +175,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-优先级队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-优先级队列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/">优先级队列</a>
+    <h1 class="article-title" itemprop="name">
+      优先级队列
     </h1>
   
 
@@ -196,13 +199,19 @@
     <div class="article-entry" itemprop="articleBody">
       
 
-       <h2 id="优先级队列"><a href="#优先级队列" class="headerlink" title="优先级队列"></a>优先级队列</h2><h3 id="一-队列"><a href="#一-队列" class="headerlink" title="一. 队列"></a>一. 队列</h3><h4 id="1-什么是队列"><a href="#1-什么是队列" class="headerlink" title="1.什么是队列"></a>1.什么是队列</h4><ul>
+      
+      <h2 id="优先级队列"><a href="#优先级队列" class="headerlink" title="优先级队列"></a>优先级队列</h2><h3 id="一-队列"><a href="#一-队列" class="headerlink" title="一. 队列"></a>一. 队列</h3><h4 id="1-什么是队列"><a href="#1-什么是队列" class="headerlink" title="1.什么是队列"></a>1.什么是队列</h4><ul>
 <li>我们都知道我们大部分代码都是放到栈中，等执行的时候再把它拿出来。而放入栈里面的代码执行先后顺序为后放入的先执行，它就像一个桶只有一个开口。</li>
 <li>而队列就像排队一样有两个开口，且先进去的先执行</li>
 </ul>
 <h4 id="2-什么是优先级队列"><a href="#2-什么是优先级队列" class="headerlink" title="2. 什么是优先级队列"></a>2. 什么是优先级队列</h4><ul>
 <li>优先级队列就是在储存数据的时候并传入一个优先级，根据优先级来改变数据的位置，就像现实生活中插队一样</li>
 </ul>
+<a id="more"></a>
+
+<h4 id="3-代码实现"><a href="#3-代码实现" class="headerlink" title="3. 代码实现"></a>3. 代码实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">class Queue &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.queue &#x3D; []</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  push(value) &#123;</span><br><span class="line">    this.queue.push(value)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  getValue() &#123;</span><br><span class="line">  	return this.queue.shift()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 不用splice的实现方式</span><br><span class="line">  appendPriority(value) &#123;</span><br><span class="line">    if(this.queue.length &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">      this.queue.push(value)</span><br><span class="line">      return</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      if (value.priority &gt; this.queue[this.queue.length - 1].priority) &#123;</span><br><span class="line">        this.queue[this.queue.length] &#x3D; value</span><br><span class="line">      &#125;</span><br><span class="line">      for(let i&#x3D;0; i&lt;this.queue.length; ++i) &#123;</span><br><span class="line">        if(this.queue[i].priority&gt;value.priority) &#123;</span><br><span class="line">          let length &#x3D; this.queue.length  </span><br><span class="line">          let k &#x3D; length - i   </span><br><span class="line">          while(k) &#123;</span><br><span class="line">            this.queue[length] &#x3D; this.queue[length-1]</span><br><span class="line">            --k</span><br><span class="line">            --length</span><br><span class="line">          &#125;</span><br><span class="line">          this.queue[i] &#x3D; value</span><br><span class="line">          return</span><br><span class="line">        &#125; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 用splice的实现方式</span><br><span class="line">  appendPriority(value) &#123;</span><br><span class="line">    let k &#x3D; false</span><br><span class="line"></span><br><span class="line">    for(let i&#x3D;0; i&lt;this.queue.length; ++i) &#123;</span><br><span class="line">      if (this.queue[i].priority &gt; value.priority) &#123;</span><br><span class="line">        this.queue.splice(i, 0, value)</span><br><span class="line">        return</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    if(!k) this.queue.push(value)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class PriorityQueue &#123;</span><br><span class="line">  constructor(element, priority) &#123;</span><br><span class="line">    this.element &#x3D; element</span><br><span class="line">    this.priority &#x3D; priority</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const test &#x3D; new Queue()</span><br><span class="line">test.push(new PriorityQueue(&#39;小明&#39;, 1))</span><br><span class="line">test.push(new PriorityQueue(&#39;小红&#39;, 4))</span><br><span class="line">test.push(new PriorityQueue(&#39;小刚&#39;, 6))</span><br><span class="line">test.push(new PriorityQueue(&#39;小黑&#39;, 7))</span><br><span class="line">test.push(new PriorityQueue(&#39;小蓝&#39;, 9))</span><br><span class="line"></span><br><span class="line">test.appendPriority(new PriorityQueue(&#39;小紫&#39;, 2))</span><br><span class="line">test.appendPriority(new PriorityQueue(&#39;小粉&#39;, 11))</span><br><span class="line">test.appendPriority(new PriorityQueue(&#39;小黄&#39;, 8))</span><br><span class="line">console.log(test)</span><br></pre></td></tr></table></figure>
+
+
       
       
 
@@ -216,11 +225,60 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/">朕要看全部 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img
+        src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://leolee441987091.github.io/2020/05/26/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"
+        alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
@@ -229,6 +287,18 @@
   
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/20/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">双向链表</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -243,682 +313,56 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-双向链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">双向链表</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/20/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-05-20T11:57:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><h3 id="一-双向链表和单向链表的区别"><a href="#一-双向链表和单向链表的区别" class="headerlink" title="一. 双向链表和单向链表的区别"></a>一. 双向链表和单向链表的区别</h3><ol>
-<li>单向链表的数据指向是单向的，是不可逆的。而双向链表数据的指向是双向的，是可逆的。</li>
-<li>单向链表只能有链头，而双向链表既有链头又有链尾，且链头和链尾都可以为起点开始遍历数据。</li>
-</ol>
-<h3 id="二-创建双向链表"><a href="#二-创建双向链表" class="headerlink" title="二. 创建双向链表"></a>二. 创建双向链表</h3><h4 id="1-创建方法"><a href="#1-创建方法" class="headerlink" title="1. 创建方法"></a>1. 创建方法</h4>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#优先级队列"><span class="toc-number">1.</span> <span class="toc-text">优先级队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-队列"><span class="toc-number">1.1.</span> <span class="toc-text">一. 队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是队列"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.什么是队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-什么是优先级队列"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 什么是优先级队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-代码实现"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 代码实现</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-单向链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8/">单向链表</a>
-    </h1>
-  
+   
+   <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80OTg1OC8yNjM0OQ==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
 
-        
-        
+      if (typeof LivereTower === 'function') {
+        return;
+      }
 
-<a href="/2020/05/18/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-05-18T14:04:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        
-      </header>
-    
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
 
-    <div class="article-entry" itemprop="articleBody">
-      
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+   
 
-       <h2 id="单向链表"><a href="#单向链表" class="headerlink" title="单向链表"></a>单向链表</h2><h3 id="一-链表"><a href="#一-链表" class="headerlink" title="一.链表"></a>一.链表</h3><h4 id="1-链表和数组的区别"><a href="#1-链表和数组的区别" class="headerlink" title="1.链表和数组的区别"></a>1.链表和数组的区别</h4><ul>
-<li>储存数据方式不同。我们都知道在很多语言中定义数组如果要保存数据那么它里面的内存一定为连续的，而在链表中它储存数据内存不一定要连续的内存。</li>
-<li>访问数据方式不同。数组可以直接用下标值访问数据，而链表只能通过遍历来访问数据</li>
-<li>删除数据方式不同。数组删除一个数据整体的数据都需要进行位移，而链表删除数据只需要改变一个数据的指向就可以了</li>
-</ul>
-<h3 id="2-链表的优缺点"><a href="#2-链表的优缺点" class="headerlink" title="2.链表的优缺点"></a>2.链表的优缺点</h3>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
   
   
   
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
 
   
-    <article id="post-element-ui之form表单注意点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/15/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/">element-ui之form表单注意点</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/15/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2020-05-15T14:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="element-ui之form表单注意点"><a href="#element-ui之form表单注意点" class="headerlink" title="element-ui之form表单注意点"></a>element-ui之form表单注意点</h2><h3 id="一-关于rules"><a href="#一-关于rules" class="headerlink" title="一. 关于rules"></a>一. 关于rules</h3><h4 id="1-1-rules的参数"><a href="#1-1-rules的参数" class="headerlink" title="1.1. rules的参数"></a>1.1. rules的参数</h4><p>1.注意rules对应的规则对象，如下面的loginRules，里面的参数必须和prop对应</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    inputText: &#123;</span><br><span class="line">      &#39;account&#39;: &#39;&#39;,</span><br><span class="line">      &#39;password&#39;: &#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    loginRules: &#123;</span><br><span class="line">      account: [</span><br><span class="line">        &#123;required: true, message: &#39;账号不能为空&#39;, trigger: &#39;blur&#39; &#125;,</span><br><span class="line">        &#123; min: 4, max: 10, message: &#39;长度在 4 到 10 个字符&#39;, trigger: &#39;blur&#39; &#125;</span><br><span class="line">      ],</span><br><span class="line">      password: [</span><br><span class="line">        &#123;required: true, message: &#39;密码不能为空&#39;, trigger: &#39;blur&#39;&#125;,</span><br><span class="line">        &#123; min: 5, max: 16, message: &#39;长度在 5 到 16 个字符&#39;, trigger: &#39;blur&#39; &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/15/element-ui%E4%B9%8Bform%E8%A1%A8%E5%8D%95%E6%B3%A8%E6%84%8F%E7%82%B9/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
 
   
-    <article id="post-element-ui导航菜单踩坑记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/element-ui%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">element-ui导航菜单踩坑记录</a>
-    </h1>
-  
 
-        
-        
-
-<a href="/2020/05/07/element-ui%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2020-05-07T14:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="element-ui导航菜单踩坑记录"><a href="#element-ui导航菜单踩坑记录" class="headerlink" title="element-ui导航菜单踩坑记录"></a>element-ui导航菜单踩坑记录</h2><h3 id="一-关于参数default-openeds"><a href="#一-关于参数default-openeds" class="headerlink" title="一. 关于参数default-openeds"></a>一. 关于参数default-openeds</h3><h4 id="1-1-注意点"><a href="#1-1-注意点" class="headerlink" title="1.1. 注意点"></a>1.1. 注意点</h4><p>1.注意default-openeds属性值必须绑定</p>
-<p>   官方是这样写的,中间的代码片段我去掉了，具体可以去官网看看，当default-openeds不用v-bind时会报错</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-menu :default-openeds&#x3D;&quot;[&#39;1&#39;, &#39;3&#39;]&quot;&gt;&lt;&#x2F;el-menu&gt;</span><br></pre></td></tr></table></figure>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/element-ui%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-路由传参之query和params的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%E4%B9%8Bquery%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">前端路由传参之query和params的区别</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/07/%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%E4%B9%8Bquery%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-05-07T14:09:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="前端路由传参的query和params的区别"><a href="#前端路由传参的query和params的区别" class="headerlink" title="前端路由传参的query和params的区别"></a>前端路由传参的query和params的区别</h2><h3 id="一-query"><a href="#一-query" class="headerlink" title="一. query"></a>一. query</h3><h4 id="1-1-query的用法"><a href="#1-1-query的用法" class="headerlink" title="1.1. query的用法"></a>1.1. query的用法</h4><p>1.直接写的跳转模式</p>
-<p>   在url后面直接接参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.push(&#39;&#x2F;users?q&#x3D;123&#39;)</span><br></pre></td></tr></table></figure>
-
-<p>2.另一种方式的跳转</p>
-<p>   path为跳转的地址，query对象为跳转时携带的参数，而这种方式实际上url地址后面存有?q=123</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">router.push(&#123;</span><br><span class="line">  path: &#39;&#x2F;users,</span><br><span class="line">  query: &#123;</span><br><span class="line">    q: 123</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%E4%B9%8Bquery%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-v-if和v-show在其他方面的影响" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/v-if%E5%92%8Cv-show%E5%9C%A8%E5%85%B6%E4%BB%96%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BD%B1%E5%93%8D/">v-if和v-show在其他方面的影响</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/07/v-if%E5%92%8Cv-show%E5%9C%A8%E5%85%B6%E4%BB%96%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BD%B1%E5%93%8D/" class="archive-article-date">
-  	<time datetime="2020-05-07T14:04:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="v-if和v-show在element-ui的输入框的影响"><a href="#v-if和v-show在element-ui的输入框的影响" class="headerlink" title="v-if和v-show在element-ui的输入框的影响"></a>v-if和v-show在element-ui的输入框的影响</h2><h3 id="一-v-if和v-show在input输入框中的影响"><a href="#一-v-if和v-show在input输入框中的影响" class="headerlink" title="一. v-if和v-show在input输入框中的影响"></a>一. v-if和v-show在input输入框中的影响</h3><h4 id="1-1-在对element-ui中的dialog对话框复用操作时"><a href="#1-1-在对element-ui中的dialog对话框复用操作时" class="headerlink" title="1.1. 在对element-ui中的dialog对话框复用操作时"></a>1.1. 在对element-ui中的dialog对话框复用操作时</h4><ul>
-<li>为了不重复写组件所以要修改某些特定的项，如我们不需要密码项了，所以我们需要加上v-if或者v-show，这两者都可以隐藏，我们也知道如果需要频繁切换，则使用v-show 性能较高。但是v-show虽然隐藏了，但实际它的属性还存在着所以当我们在input输入框时用v-show会出现以下情况<br><img src="/2020/05/07/v-if%E5%92%8Cv-show%E5%9C%A8%E5%85%B6%E4%BB%96%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BD%B1%E5%93%8D/1.png" alt="图片"><br>加上v-show后</li></ul>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/v-if%E5%92%8Cv-show%E5%9C%A8%E5%85%B6%E4%BB%96%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BD%B1%E5%93%8D/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-phpstudy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/phpstudy/">安装phpstudy原有数据库服务消失和冲突的解决</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/07/phpstudy/" class="archive-article-date">
-  	<time datetime="2020-05-07T13:57:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="安装phpstudy原有数据库服务消失和冲突的解决"><a href="#安装phpstudy原有数据库服务消失和冲突的解决" class="headerlink" title="安装phpstudy原有数据库服务消失和冲突的解决"></a>安装phpstudy原有数据库服务消失和冲突的解决</h2><h3 id="一-问题"><a href="#一-问题" class="headerlink" title="一. 问题"></a>一. 问题</h3><h4 id="1-1-phpstudy的数据库和启动不了或原有数据库启动不了"><a href="#1-1-phpstudy的数据库和启动不了或原有数据库启动不了" class="headerlink" title="1.1. phpstudy的数据库和启动不了或原有数据库启动不了"></a>1.1. phpstudy的数据库和启动不了或原有数据库启动不了</h4>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/phpstudy/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-axios请求过程中data和params的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">axios请求过程中data和params的区别</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-05-05T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="axios请求过程中data和params的区别"><a href="#axios请求过程中data和params的区别" class="headerlink" title="axios请求过程中data和params的区别"></a>axios请求过程中data和params的区别</h2><h3 id="一-axios请求参数data和params"><a href="#一-axios请求参数data和params" class="headerlink" title="一. axios请求参数data和params"></a>一. axios请求参数data和params</h3><h4 id="1-1-axios中关于参数data的基本使用"><a href="#1-1-axios中关于参数data的基本使用" class="headerlink" title="1.1. axios中关于参数data的基本使用"></a>1.1. axios中关于参数data的基本使用</h4><p>1.axios带data参数的请求</p>
-<p>   data是添加到请求体（body）中的， 用于post请求。而如果把data换成params显然不能成功的发送请求的</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    method: &quot;post&quot;,</span><br><span class="line">    url: &quot;http:&#x2F;&#x2F;www.tuling123.com&#x2F;openapi&#x2F;api?key&#x3D;5&quot;,</span><br><span class="line">    data: &#123;</span><br><span class="line">    info: &quot;湖北天气&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/27/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/04/27/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-27T10:59:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h3 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a>这是我的第一篇博客</h3><h3 id="一-完成"><a href="#一-完成" class="headerlink" title="一. 完成"></a>一. 完成</h3>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/27/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -938,8 +382,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
