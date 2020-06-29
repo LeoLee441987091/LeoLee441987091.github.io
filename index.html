@@ -172,6 +172,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-哈希表的扩容和缩小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/">哈希表的扩容和缩小</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/" class="archive-article-date">
+  	<time datetime="2020-06-29T14:48:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
+</a>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+       <h2 id="哈希表的扩容和缩小"><a href="#哈希表的扩容和缩小" class="headerlink" title="哈希表的扩容和缩小"></a>哈希表的扩容和缩小</h2><h3 id="一-hash扩容和缩小"><a href="#一-hash扩容和缩小" class="headerlink" title="一. hash扩容和缩小"></a>一. hash扩容和缩小</h3><h4 id="1-为什么需要hash的扩容和缩小"><a href="#1-为什么需要hash的扩容和缩小" class="headerlink" title="1. 为什么需要hash的扩容和缩小"></a>1. 为什么需要hash的扩容和缩小</h4><ul>
+<li>在使用链地址法不断的插入新值的时候当值累积过多的时候就会影响性能。</li>
+<li>在值又减少时又会浪费大量空间。</li>
+</ul>
+<h4 id="2-在什么时候进行扩容和缩小"><a href="#2-在什么时候进行扩容和缩小" class="headerlink" title="2. 在什么时候进行扩容和缩小"></a>2. 在什么时候进行扩容和缩小</h4><ul>
+<li><p>在当前所存储的数大于hash表所能存储的总数乘以hash因子的时候就触发扩容。</p>
+</li>
+<li><p>在当前所存储的数小于hash表所能存储的总数乘以hash因子并且hash表所能存储的总数大于规定最小所能存储的总数。</p>
+</li>
+<li><p>hash因子是自己决定的，一般为0.75。</p>
+</li>
+<li><p>扩容的大小一般为当前可存储总数的两倍，且往附近的质数取值。</p></li></ul>
+      
+      
+
+      
+
+    </div>
+
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/">朕要看全部 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  
+  
+  
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-哈希表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -816,80 +899,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/07/phpstudy/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-axios请求过程中data和params的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">axios请求过程中data和params的区别</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-05-05T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="axios请求过程中data和params的区别"><a href="#axios请求过程中data和params的区别" class="headerlink" title="axios请求过程中data和params的区别"></a>axios请求过程中data和params的区别</h2><h3 id="一-axios请求参数data和params"><a href="#一-axios请求参数data和params" class="headerlink" title="一. axios请求参数data和params"></a>一. axios请求参数data和params</h3><h4 id="1-1-axios中关于参数data的基本使用"><a href="#1-1-axios中关于参数data的基本使用" class="headerlink" title="1.1. axios中关于参数data的基本使用"></a>1.1. axios中关于参数data的基本使用</h4><p>1.axios带data参数的请求</p>
-<p>   data是添加到请求体（body）中的， 用于post请求。而如果把data换成params显然不能成功的发送请求的</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    method: &quot;post&quot;,</span><br><span class="line">    url: &quot;http:&#x2F;&#x2F;www.tuling123.com&#x2F;openapi&#x2F;api?key&#x3D;5&quot;,</span><br><span class="line">    data: &#123;</span><br><span class="line">    info: &quot;湖北天气&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/">朕要看全部 >></a>
         </p>
       
 

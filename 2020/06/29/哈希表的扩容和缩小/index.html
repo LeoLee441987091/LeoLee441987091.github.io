@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据结构和算法目录 | Hey Jude</title>
+  <title>哈希表的扩容和缩小 | Hey Jude</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一 优先级队列二 单向链表三 双向链表四 哈希表">
-<meta property="og:type" content="website">
-<meta property="og:title" content="数据结构和算法目录">
-<meta property="og:url" content="http://yoursite.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/index.html">
+  <meta name="description" content="哈希表的扩容和缩小一. hash扩容和缩小1. 为什么需要hash的扩容和缩小 在使用链地址法不断的插入新值的时候当值累积过多的时候就会影响性能。 在值又减少时又会浪费大量空间。  2. 在什么时候进行扩容和缩小 在当前所存储的数大于hash表所能存储的总数乘以hash因子的时候就触发扩容。  在当前所存储的数小于hash表所能存储的总数乘以hash因子并且hash表所能存储的总数大于规定最小所能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="哈希表的扩容和缩小">
+<meta property="og:url" content="http://yoursite.com/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/index.html">
 <meta property="og:site_name" content="Hey Jude">
-<meta property="og:description" content="一 优先级队列二 单向链表三 双向链表四 哈希表">
+<meta property="og:description" content="哈希表的扩容和缩小一. hash扩容和缩小1. 为什么需要hash的扩容和缩小 在使用链地址法不断的插入新值的时候当值累积过多的时候就会影响性能。 在值又减少时又会浪费大量空间。  2. 在什么时候进行扩容和缩小 在当前所存储的数大于hash表所能存储的总数乘以hash因子的时候就触发扩容。  在当前所存储的数小于hash表所能存储的总数乘以hash因子并且hash表所能存储的总数大于规定最小所能">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-27T10:58:56.000Z">
-<meta property="article:modified_time" content="2020-06-06T14:44:58.449Z">
+<meta property="article:published_time" content="2020-06-29T14:48:18.000Z">
+<meta property="article:modified_time" content="2020-06-29T14:49:31.555Z">
 <meta property="article:author" content="Leo Lee">
 <meta name="twitter:card" content="summary">
   
@@ -174,22 +174,23 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            
+<article id="post-哈希表的扩容和缩小" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据结构和算法目录
+      哈希表的扩容和缩小
     </h1>
   
 
         
         
 
-<a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/index.html" class="archive-article-date">
-  	<time datetime="2020-04-27T10:58:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
+<a href="/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/" class="archive-article-date">
+  	<time datetime="2020-06-29T14:48:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
 </a>
         
       </header>
@@ -199,7 +200,27 @@
       
 
       
-      <h3 id="一-优先级队列"><a href="#一-优先级队列" class="headerlink" title="一 优先级队列"></a>一 <a href="https://coderleo-t.github.io/2020/05/26/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/" target="_blank" rel="noopener">优先级队列</a></h3><h3 id="二-单向链表"><a href="#二-单向链表" class="headerlink" title="二 单向链表"></a>二 <a href="https://coderleo-t.github.io/2020/05/18/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8/" target="_blank" rel="noopener">单向链表</a></h3><h3 id="三-双向链表"><a href="#三-双向链表" class="headerlink" title="三 双向链表"></a>三 <a href="https://coderleo-t.github.io/2020/05/20/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" target="_blank" rel="noopener">双向链表</a></h3><h3 id="四-哈希表"><a href="#四-哈希表" class="headerlink" title="四 哈希表"></a>四 <a href="https://coderleo-t.github.io/2020/06/06/%E5%93%88%E5%B8%8C%E8%A1%A8/" target="_blank" rel="noopener">哈希表</a></h3>
+      <h2 id="哈希表的扩容和缩小"><a href="#哈希表的扩容和缩小" class="headerlink" title="哈希表的扩容和缩小"></a>哈希表的扩容和缩小</h2><h3 id="一-hash扩容和缩小"><a href="#一-hash扩容和缩小" class="headerlink" title="一. hash扩容和缩小"></a>一. hash扩容和缩小</h3><h4 id="1-为什么需要hash的扩容和缩小"><a href="#1-为什么需要hash的扩容和缩小" class="headerlink" title="1. 为什么需要hash的扩容和缩小"></a>1. 为什么需要hash的扩容和缩小</h4><ul>
+<li>在使用链地址法不断的插入新值的时候当值累积过多的时候就会影响性能。</li>
+<li>在值又减少时又会浪费大量空间。</li>
+</ul>
+<h4 id="2-在什么时候进行扩容和缩小"><a href="#2-在什么时候进行扩容和缩小" class="headerlink" title="2. 在什么时候进行扩容和缩小"></a>2. 在什么时候进行扩容和缩小</h4><ul>
+<li><p>在当前所存储的数大于hash表所能存储的总数乘以hash因子的时候就触发扩容。</p>
+</li>
+<li><p>在当前所存储的数小于hash表所能存储的总数乘以hash因子并且hash表所能存储的总数大于规定最小所能存储的总数。</p>
+</li>
+<li><p>hash因子是自己决定的，一般为0.75。</p>
+</li>
+<li><p>扩容的大小一般为当前可存储总数的两倍，且往附近的质数取值。</p>
+<a id="more"></a>
+<h4 id="3-扩容后的处理"><a href="#3-扩容后的处理" class="headerlink" title="3. 扩容后的处理"></a>3. 扩容后的处理</h4></li>
+<li><p>将原来的hash表的值在新扩容的hash表中按照原来的方法重新排布。</p>
+</li>
+</ul>
+<h3 id="二-完整代码及注释"><a href="#二-完整代码及注释" class="headerlink" title="二. 完整代码及注释"></a>二. 完整代码及注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  当hash的长度为质数时，那么重复的位置就会变少，所以在选取长度时应该选择质数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个由三维数组实现的hash表</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HashMap</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="comment">// 最大长度</span></span><br><span class="line">    <span class="keyword">this</span>.limit = <span class="number">7</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当前hash表存放的总个数</span></span><br><span class="line">    <span class="keyword">this</span>.count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置再hash系数</span></span><br><span class="line">    <span class="keyword">this</span>.RELOAD_FACTOR = <span class="number">0.75</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建一个hash表</span></span><br><span class="line">    <span class="keyword">this</span>.hashMap = []</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 向hashmap里面存放数据</span></span><br><span class="line">  put(key, value) &#123;</span><br><span class="line">    <span class="keyword">const</span> hashCode = <span class="keyword">this</span>.setHash(key, <span class="keyword">this</span>.limit)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在计算后的hashcode数组位置的数组赋给bucket，也可以将bucket弄成链表</span></span><br><span class="line">    <span class="keyword">let</span> bucket = <span class="keyword">this</span>.hashMap[hashCode]</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果hashcode位置没有数组则创建一个新的数组,并把值变为数组放进去</span></span><br><span class="line">    <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line"></span><br><span class="line">      bucket = []</span><br><span class="line">      bucket.push([key, value])</span><br><span class="line">      <span class="keyword">this</span>.hashMap[hashCode] = bucket</span><br><span class="line">      <span class="keyword">this</span>.count++</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.count &gt; (<span class="keyword">this</span>.limit * <span class="keyword">this</span>.RELOAD_FACTOR)) &#123;</span><br><span class="line">        <span class="keyword">let</span> newLimit = <span class="keyword">this</span>.getPrime(<span class="keyword">this</span>.limit * <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">this</span>.resetHash(newLimit)</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 循环判断是否有key相同的，如果有则将其数组覆盖</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; bucket.length; index++) &#123;</span><br><span class="line">      <span class="keyword">let</span> oldValue = bucket[index]</span><br><span class="line">      <span class="keyword">if</span> (oldValue[<span class="number">0</span>] === key) &#123;</span><br><span class="line">        <span class="keyword">let</span> replaceValue = oldValue[<span class="number">1</span>]</span><br><span class="line">        oldValue[<span class="number">1</span>] = value</span><br><span class="line">        <span class="keyword">return</span> replaceValue</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果即位置不为空也没相同的key则直接push进去</span></span><br><span class="line">    bucket.push([key, value])</span><br><span class="line">    <span class="keyword">this</span>.count++</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.count &gt; (<span class="keyword">this</span>.limit * <span class="keyword">this</span>.RELOAD_FACTOR)) &#123;</span><br><span class="line">      <span class="keyword">let</span> newLimit = <span class="keyword">this</span>.getPrime(<span class="keyword">this</span>.limit * <span class="number">2</span>)</span><br><span class="line">      <span class="keyword">this</span>.resetHash(newLimit)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 根据key获取value值</span></span><br><span class="line">  getValue(key) &#123;</span><br><span class="line">    <span class="keyword">let</span> hashcode = <span class="keyword">this</span>.setHash(key, <span class="keyword">this</span>.limit)</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.hashMap[hashcode] === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">const</span> bucket = <span class="keyword">this</span>.hashMap[hashcode]</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; bucket.length; index++) &#123;</span><br><span class="line">      <span class="keyword">let</span> oldValue = bucket[index]</span><br><span class="line">      <span class="keyword">if</span> (oldValue[<span class="number">0</span>] === key) <span class="keyword">return</span> oldValue[<span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 设置hashcode</span></span><br><span class="line">  setHash(key, maxLenght) &#123;</span><br><span class="line">    <span class="keyword">let</span> hashCode = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; key.length; index++) &#123;</span><br><span class="line">      <span class="comment">// 利用秦九韶算法得出hashcode，获得每个位置数ASC||码与前面的数字相加</span></span><br><span class="line">      <span class="comment">// 字符转ascii码：用charCodeAt();</span></span><br><span class="line">      <span class="comment">// ascii码砖字符：用fromCharCode();</span></span><br><span class="line">      hashCode = <span class="number">31</span> * hashCode + key.charCodeAt(index)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// hashCode此时为很大的值，所以需要保证它在最大数值之内</span></span><br><span class="line">    hashCode %= maxLenght</span><br><span class="line">    <span class="keyword">return</span> hashCode</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 判断是否为质数</span></span><br><span class="line">  isPrime(number) &#123;</span><br><span class="line">    <span class="comment">// 由于不是质数的平方根以下的数如果有整除的那么绝对不是质数，所以取要判断质数的数的平方根减少计算</span></span><br><span class="line">    <span class="keyword">let</span> newNumber = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.sqrt(number))</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">2</span>; index &lt; newNumber; index++) &#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 当number的平方根以下都没有和number整除的话那就是质数</span></span><br><span class="line">      <span class="keyword">if</span> (number % index === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 获取质数</span></span><br><span class="line">  getPrime(number) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当不是质数时一直循环加一</span></span><br><span class="line">    <span class="keyword">while</span> (!<span class="keyword">this</span>.isPrime(number)) &#123;</span><br><span class="line">      number++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> number</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当长度大于或小于一定值的时候重置hashMap的长度</span></span><br><span class="line">  resetHash(prime) &#123;</span><br><span class="line">    <span class="keyword">const</span> oldHashMap = <span class="keyword">this</span>.hashMap</span><br><span class="line">    <span class="keyword">this</span>.hashMap = []</span><br><span class="line">    <span class="keyword">this</span>.limit = prime</span><br><span class="line">    <span class="keyword">this</span>.count = <span class="number">0</span></span><br><span class="line">    oldHashMap.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(!item) <span class="keyword">return</span></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;item.length; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> oldValue = item[i]</span><br><span class="line">        <span class="keyword">this</span>.put(oldValue[<span class="number">0</span>], oldValue[<span class="number">1</span>])</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 根据key删除value</span></span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    <span class="keyword">let</span> hashCode = <span class="keyword">this</span>.setHash(key, <span class="keyword">this</span>.limit)</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.hashMap[hashCode] === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">const</span> bucket = <span class="keyword">this</span>.hashMap[hashCode]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;bucket.length; i++) &#123;</span><br><span class="line">      <span class="keyword">let</span> oldValue = bucket[i]</span><br><span class="line">      <span class="keyword">if</span>(oldValue[<span class="number">0</span>] === key) &#123;</span><br><span class="line">        bucket.splice(i, <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">this</span>.count--</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.limit &gt; <span class="number">8</span> &amp;&amp; <span class="keyword">this</span>.count &lt; (<span class="keyword">this</span>.limit * <span class="keyword">this</span>.RELOAD_FACTOR)) &#123;</span><br><span class="line">          <span class="keyword">let</span> newLimit = <span class="keyword">this</span>.getPrime(<span class="built_in">Math</span>.floor(<span class="keyword">this</span>.limit/<span class="number">2</span>))</span><br><span class="line">          <span class="keyword">this</span>.resetHash(newLimit)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = <span class="keyword">new</span> HashMap()</span><br><span class="line">test.put(<span class="string">'小明'</span>, <span class="number">11</span>)</span><br><span class="line">test.put(<span class="string">'小红'</span>, <span class="number">12</span>)</span><br><span class="line">test.put(<span class="string">'小绿'</span>, <span class="number">13</span>)</span><br><span class="line">test.put(<span class="string">'小刚'</span>, <span class="number">14</span>)</span><br><span class="line">test.put(<span class="string">'小花'</span>, <span class="number">15</span>)</span><br><span class="line">test.put(<span class="string">'小智'</span>, <span class="number">16</span>)</span><br><span class="line">test.remove(<span class="string">'小明'</span>)</span><br><span class="line">test.remove(<span class="string">'小红'</span>)</span><br><span class="line">test.remove(<span class="string">'小刚'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(test)</span><br></pre></td></tr></table></figure>
+
+
+
       
       
 
@@ -261,7 +282,7 @@
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
       <img
-        src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://leolee441987091.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"
+        src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://leolee441987091.github.io/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/"
         alt="微信分享二维码">
     </div>
 </div>
@@ -277,6 +298,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/06/%E5%93%88%E5%B8%8C%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">哈希表</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -298,7 +329,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-优先级队列"><span class="toc-number">1.</span> <span class="toc-text">一 优先级队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-单向链表"><span class="toc-number">2.</span> <span class="toc-text">二 单向链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-双向链表"><span class="toc-number">3.</span> <span class="toc-text">三 双向链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-哈希表"><span class="toc-number">4.</span> <span class="toc-text">四 哈希表</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#哈希表的扩容和缩小"><span class="toc-number">1.</span> <span class="toc-text">哈希表的扩容和缩小</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-hash扩容和缩小"><span class="toc-number">1.1.</span> <span class="toc-text">一. hash扩容和缩小</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-为什么需要hash的扩容和缩小"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 为什么需要hash的扩容和缩小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-在什么时候进行扩容和缩小"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 在什么时候进行扩容和缩小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-扩容后的处理"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 扩容后的处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-完整代码及注释"><span class="toc-number">1.2.</span> <span class="toc-text">二. 完整代码及注释</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -308,6 +339,40 @@
 </aside>
 
 
+
+
+   
+   <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80OTg1OC8yNjM0OQ==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+
+      if (typeof LivereTower === 'function') {
+        return;
+      }
+
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+   
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -327,7 +392,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
