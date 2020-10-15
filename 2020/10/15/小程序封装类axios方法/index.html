@@ -6,25 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>安装phpstudy原有数据库服务消失和冲突的解决 | Hey Jude</title>
+  <title>小程序封装类axios方法 | Hey Jude</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装phpstudy原有数据库服务消失和冲突的解决一. 问题1.1. phpstudy的数据库和启动不了或原有数据库启动不了">
+  <meta name="description" content="小程序封装类axios的网络请求1. 为什么要封装小程序的网络请求 当我们在小程序中编写网络请求的过程中，无论是原生代码或者框架都会重复下面的代码  1234567891011uni.request(&amp;#123;       url: &#39;http:&#x2F;&#x2F;127.0.0.1:8888&#x2F;api&#x2F;private&#x2F;v1&#x2F;login?username&#x3D;admin&amp;password&#x3D;123456&#39;,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装phpstudy原有数据库服务消失和冲突的解决">
-<meta property="og:url" content="http://yoursite.com/2020/05/07/phpstudy/index.html">
+<meta property="og:title" content="小程序封装类axios方法">
+<meta property="og:url" content="http://yoursite.com/2020/10/15/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%81%E8%A3%85%E7%B1%BBaxios%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hey Jude">
-<meta property="og:description" content="安装phpstudy原有数据库服务消失和冲突的解决一. 问题1.1. phpstudy的数据库和启动不了或原有数据库启动不了">
+<meta property="og:description" content="小程序封装类axios的网络请求1. 为什么要封装小程序的网络请求 当我们在小程序中编写网络请求的过程中，无论是原生代码或者框架都会重复下面的代码  1234567891011uni.request(&amp;#123;       url: &#39;http:&#x2F;&#x2F;127.0.0.1:8888&#x2F;api&#x2F;private&#x2F;v1&#x2F;login?username&#x3D;admin&amp;password&#x3D;123456&#39;,">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/05/07/phpstudy/1.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/07/phpstudy/2.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/07/phpstudy/3.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/07/phpstudy/4.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/07/phpstudy/5.png">
-<meta property="article:published_time" content="2020-05-07T13:57:48.000Z">
-<meta property="article:modified_time" content="2020-05-20T12:03:43.311Z">
+<meta property="article:published_time" content="2020-10-15T13:16:53.000Z">
+<meta property="article:modified_time" content="2020-10-15T13:21:58.697Z">
 <meta property="article:author" content="Leo Lee">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/07/phpstudy/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hey Jude" type="application/atom+xml">
   
@@ -187,22 +181,22 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-phpstudy" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-小程序封装类axios方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      安装phpstudy原有数据库服务消失和冲突的解决
+      小程序封装类axios方法
     </h1>
   
 
         
         
 
-<a href="/2020/05/07/phpstudy/" class="archive-article-date">
-  	<time datetime="2020-05-07T13:57:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+<a href="/2020/10/15/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%81%E8%A3%85%E7%B1%BBaxios%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-10-15T13:16:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-15</time>
 </a>
         
       </header>
@@ -212,26 +206,26 @@
       
 
       
-      <h2 id="安装phpstudy原有数据库服务消失和冲突的解决"><a href="#安装phpstudy原有数据库服务消失和冲突的解决" class="headerlink" title="安装phpstudy原有数据库服务消失和冲突的解决"></a>安装phpstudy原有数据库服务消失和冲突的解决</h2><h3 id="一-问题"><a href="#一-问题" class="headerlink" title="一. 问题"></a>一. 问题</h3><h4 id="1-1-phpstudy的数据库和启动不了或原有数据库启动不了"><a href="#1-1-phpstudy的数据库和启动不了或原有数据库启动不了" class="headerlink" title="1.1. phpstudy的数据库和启动不了或原有数据库启动不了"></a>1.1. phpstudy的数据库和启动不了或原有数据库启动不了</h4><a id="more"></a>
+      <h2 id="小程序封装类axios的网络请求"><a href="#小程序封装类axios的网络请求" class="headerlink" title="小程序封装类axios的网络请求"></a>小程序封装类axios的网络请求</h2><h4 id="1-为什么要封装小程序的网络请求"><a href="#1-为什么要封装小程序的网络请求" class="headerlink" title="1. 为什么要封装小程序的网络请求"></a>1. 为什么要封装小程序的网络请求</h4><ul>
+<li>当我们在小程序中编写网络请求的过程中，无论是原生代码或者框架都会重复下面的代码</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">uni.request(&#123;</span><br><span class="line">       url: <span class="string">'http://127.0.0.1:8888/api/private/v1/login?username=admin&amp;password=123456'</span>, </span><br><span class="line">       method: <span class="string">'GET'</span>,</span><br><span class="line">       data: &#123;&#125;,</span><br><span class="line">       success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">         </span><br><span class="line">       &#125;,</span><br><span class="line">       fail: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">       </span><br><span class="line">       &#125;</span><br><span class="line">     &#125;);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>这样会显得特别繁琐且不易于维护，这样看起来也不够简洁，所以我们可以把它封装一下使其变得简洁且易于维护，当哪天这个网络请求方法被废除了我们也可以只用修改少量代码。</p>
+<h4 id="2-怎么封装"><a href="#2-怎么封装" class="headerlink" title="2.怎么封装"></a>2.怎么封装</h4><ul>
+<li>当我们封装一个东西的时候，首先需要先单独创建一个工具js文件，这样易于维护。我们先简单封装一下。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">baseRequestData</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    uni.request(&#123;</span><br><span class="line">      url: <span class="string">'http://127.0.0.1:8888/api/private/v1/'</span> + options.url, <span class="comment">//仅为示例，并非真实接口地址。</span></span><br><span class="line">      method: options.method,</span><br><span class="line">      data: options.data || &#123;&#125;,</span><br><span class="line">      success: resolve,</span><br><span class="line">      fail: reject</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>把网络请求代码放进一个函数，然后返回一个promise。这样我们只用在需要用到网络请求的地方导入并调用这个函数，并传入一个对象，这个对象只需要包括简单的url请求方式和请求数据就可以了。且这个请求在成功时会调用成功的promise这个函数就可以使用.then方法了，这样更利于之后数据的处理，且减少了大部分代码。</p>
 <ul>
-<li><p>解决</p>
-<p>​    查看两个数据库端口号是否相同，如果相同则需要改变其中一个数据库的端口号</p>
-</li>
+<li>但有时候我们用习惯了axios，且这样的请求相较于axios的请求不够简洁，所以我们又可以进行封装。</li>
 </ul>
-<h4 id="2-2-原有数据库服务消失无法启动"><a href="#2-2-原有数据库服务消失无法启动" class="headerlink" title="2.2. 原有数据库服务消失无法启动"></a>2.2. 原有数据库服务消失无法启动</h4><ul>
-<li><p>解决</p>
-<p>​    用管理员cmd命令行cd到原来数据库的bin目录，并使用sqld –install命令就可以下载服务了，如果bin目录下没有sqld.exe那么可能为sqld-x.exe。就需要把sqld-x.exe重命名为sqld.exe。再使用sqld –install命令就完成了，接下来就可以启动服务了。<br><img src="/2020/05/07/phpstudy/1.png" alt="img"></p>
-<p>如果出现上面的情况把电脑重启一下就好了<br><img src="/2020/05/07/phpstudy/2.png" alt="img"></p>
-</li>
-</ul>
-<h3 id="二-扩展"><a href="#二-扩展" class="headerlink" title="二. 扩展"></a>二. 扩展</h3><h4 id="1-1-导入外部数据库报错问题"><a href="#1-1-导入外部数据库报错问题" class="headerlink" title="1.1. 导入外部数据库报错问题"></a>1.1. 导入外部数据库报错问题</h4><ul>
-<li><p>解决</p>
-<p>​    如果出现如下报错<br><img src="/2020/05/07/phpstudy/3.png" alt="img"></p>
-<p>则需要将导入的编码改成utf-8编码<br><img src="/2020/05/07/phpstudy/4.png" alt="img"></p>
-<p>然后就可以导入了<br><img src="/2020/05/07/phpstudy/5.png" alt="img"></p>
-</li>
-</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> $http = &#123;</span><br><span class="line">    <span class="keyword">get</span>(url, data) &#123;</span><br><span class="line">        <span class="keyword">return</span> baseRequestData(&#123;</span><br><span class="line">            url: url,</span><br><span class="line">            data: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    post(url, data) &#123;</span><br><span class="line">        <span class="keyword">return</span> baseRequestData(&#123;</span><br><span class="line">            url: url,</span><br><span class="line">            data: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">delete</span>(url, data) &#123;</span><br><span class="line">        <span class="keyword">return</span> baseRequestData(&#123;</span><br><span class="line">            url: url,</span><br><span class="line">            data: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    put(url, data) &#123;</span><br><span class="line">        <span class="keyword">return</span> baseRequestData(&#123;</span><br><span class="line">            url: url,</span><br><span class="line">            data: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以创建一个对象，且创建常用的请求方式函数。这样我们在使用的时候就会更加简洁，且更加像axios。只需要暴露这个对象，然后像axios那样使用就可以了。如果我们使用的是uniapp框架开发小程序，还可以入口文件中把此对象挂载在Vue的prototype上，使每个组件都能使用this.$http来调用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;$http&#125; <span class="keyword">from</span> <span class="string">'./network/baseRequest'</span></span><br><span class="line"></span><br><span class="line">Vue.prototype.$http = $http</span><br></pre></td></tr></table></figure>
+
 
       
       
@@ -294,7 +288,7 @@
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
       <img
-        src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://leolee441987091.github.io/2020/05/07/phpstudy/"
+        src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://leolee441987091.github.io/2020/10/15/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%81%E8%A3%85%E7%B1%BBaxios%E6%96%B9%E6%B3%95/"
         alt="微信分享二维码">
     </div>
 </div>
@@ -312,18 +306,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/07/v-if%E5%92%8Cv-show%E5%9C%A8%E5%85%B6%E4%BB%96%E6%96%B9%E9%9D%A2%E7%9A%84%E5%BD%B1%E5%93%8D/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          v-if和v-show在其他方面的影响
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/05/axios%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%ADdata%E5%92%8Cparams%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">axios请求过程中data和params的区别</div>
+    <a href="/2020/06/29/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9A%84%E6%89%A9%E5%AE%B9%E5%92%8C%E7%BC%A9%E5%B0%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">哈希表的扩容和缩小</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -350,7 +335,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装phpstudy原有数据库服务消失和冲突的解决"><span class="toc-number">1.</span> <span class="toc-text">安装phpstudy原有数据库服务消失和冲突的解决</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-问题"><span class="toc-number">1.1.</span> <span class="toc-text">一. 问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-phpstudy的数据库和启动不了或原有数据库启动不了"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1. phpstudy的数据库和启动不了或原有数据库启动不了</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-原有数据库服务消失无法启动"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.2. 原有数据库服务消失无法启动</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-扩展"><span class="toc-number">1.2.</span> <span class="toc-text">二. 扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-导入外部数据库报错问题"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1. 导入外部数据库报错问题</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序封装类axios的网络请求"><span class="toc-number">1.</span> <span class="toc-text">小程序封装类axios的网络请求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-为什么要封装小程序的网络请求"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 为什么要封装小程序的网络请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-怎么封装"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.怎么封装</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

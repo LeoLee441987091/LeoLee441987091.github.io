@@ -65,6 +65,8 @@
 	        
 				<li><a href="/tags">笔记</a></li>
 	        
+				<li><a href="/miniproject">小程序</a></li>
+	        
 			</ul>
 		</nav>
 
@@ -127,6 +129,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -145,17 +149,19 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 16.666666666666668%"><a href="/vue">Vue</a></li>
+					<li style="width: 14.285714285714286%"><a href="/vue">Vue</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/js">JS</a></li>
+					<li style="width: 14.285714285714286%"><a href="/js">JS</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/nodejs">NodeJs</a></li>
+					<li style="width: 14.285714285714286%"><a href="/nodejs">NodeJs</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95">数据结构和算法</a></li>
+					<li style="width: 14.285714285714286%"><a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95">数据结构和算法</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/css">CSS</a></li>
+					<li style="width: 14.285714285714286%"><a href="/css">CSS</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/tags">笔记</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags">笔记</a></li>
+		        
+					<li style="width: 14.285714285714286%"><a href="/miniproject">小程序</a></li>
 		        
 				</ul>
 			</nav>
@@ -171,6 +177,81 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-小程序封装类axios方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/15/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%81%E8%A3%85%E7%B1%BBaxios%E6%96%B9%E6%B3%95/">小程序封装类axios方法</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/10/15/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%81%E8%A3%85%E7%B1%BBaxios%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-10-15T13:16:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-15</time>
+</a>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+       <h2 id="小程序封装类axios的网络请求"><a href="#小程序封装类axios的网络请求" class="headerlink" title="小程序封装类axios的网络请求"></a>小程序封装类axios的网络请求</h2><h4 id="1-为什么要封装小程序的网络请求"><a href="#1-为什么要封装小程序的网络请求" class="headerlink" title="1. 为什么要封装小程序的网络请求"></a>1. 为什么要封装小程序的网络请求</h4><ul>
+<li>当我们在小程序中编写网络请求的过程中，无论是原生代码或者框架都会重复下面的代码</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">uni.request(&#123;</span><br><span class="line">       url: <span class="string">'http://127.0.0.1:8888/api/private/v1/login?username=admin&amp;password=123456'</span>, </span><br><span class="line">       method: <span class="string">'GET'</span>,</span><br><span class="line">       data: &#123;&#125;,</span><br><span class="line">       success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">         </span><br><span class="line">       &#125;,</span><br><span class="line">       fail: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">       </span><br><span class="line">       &#125;</span><br><span class="line">     &#125;);</span><br></pre></td></tr></table></figure>
+      
+      
+
+      
+
+    </div>
+
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/15/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%81%E8%A3%85%E7%B1%BBaxios%E6%96%B9%E6%B3%95/">朕要看全部 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  
+  
+  
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-哈希表的扩容和缩小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -859,78 +940,6 @@
 
 
   
-    <article id="post-phpstudy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/phpstudy/">安装phpstudy原有数据库服务消失和冲突的解决</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/05/07/phpstudy/" class="archive-article-date">
-  	<time datetime="2020-05-07T13:57:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-       <h2 id="安装phpstudy原有数据库服务消失和冲突的解决"><a href="#安装phpstudy原有数据库服务消失和冲突的解决" class="headerlink" title="安装phpstudy原有数据库服务消失和冲突的解决"></a>安装phpstudy原有数据库服务消失和冲突的解决</h2><h3 id="一-问题"><a href="#一-问题" class="headerlink" title="一. 问题"></a>一. 问题</h3><h4 id="1-1-phpstudy的数据库和启动不了或原有数据库启动不了"><a href="#1-1-phpstudy的数据库和启动不了或原有数据库启动不了" class="headerlink" title="1.1. phpstudy的数据库和启动不了或原有数据库启动不了"></a>1.1. phpstudy的数据库和启动不了或原有数据库启动不了</h4>
-      
-      
-
-      
-
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/phpstudy/">朕要看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  
-  
-  
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1085,7 +1094,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">感谢您的访问！</div>
   	  	
     	</section>
     
